@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+// COLOR VARIABLES
+$color-primary: #eeb4c7;
+$color-primary-dark: #d0879f;
+$color-primary-pink-dark: #da3b85;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #8e8987;
+$color-grey-light-3: #6c757d;
+
+$color-grey-dark-1: #373b4d;
+$color-grey-dark-2: #6D5D4B;
+
+$color-white: #fff;
+$color-black: #000;
+
+// FONT VARIABLES
+$font-primary: "Lora", serif;
+$font-display: "Catamaran", sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: #000;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: min-content 90vh min-content 40vw min-content;
+    grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] 1fr [full-end];
+
+        // @media only screen and (max-width: $bp-large) {
+        //     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+        // }
+
+        // @media only screen and (max-width: $bp-medium) {
+        //     grid-template-rows: 6rem calc(100vh - 6rem);
+        // }
+}

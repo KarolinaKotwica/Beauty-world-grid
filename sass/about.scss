@@ -1,0 +1,48 @@
+.about--photo,
+.about--text {
+    margin-top: 12rem;
+}
+
+.about--photo {
+    grid-column: full-start / col-start 4;
+    background-color: $color-white;
+    align-self: center;
+
+    &--img {
+        max-width: 100%;
+        padding: 5rem;
+    }
+}
+
+.about--text {
+    grid-column: col-end 3 / -1;
+    background-color: $color-white;
+
+    &--container {
+        padding: 12rem 10rem 10rem 3rem;
+
+        &--h3 {
+            color: $color-grey-light-2;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: .25rem;
+            margin-bottom: 2rem;
+        }
+
+        &--h2 {
+            font-size: 5.1rem;
+            color: $color-grey-dark-1;
+            font-weight: 600;
+        }
+
+        &--p,
+        &--list {
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+            font-family: $font-display;
+            color: $color-grey-light-3;
+            font-weight: 400;
+        }
+    }
+}
