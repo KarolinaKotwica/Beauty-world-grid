@@ -22,8 +22,37 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: min-content 90vh min-content 40vw min-content;
+  grid-template-rows: min-content 90vh repeat(3, min-content) minmax(250px, 1fr);
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+
+.section-text {
+  margin-top: 3rem;
+  grid-column: full-start / full-end;
+  text-align: center; }
+  .section-text-opinions {
+    overflow: hidden;
+    font-family: "Catamaran", sans-serif; }
+    .section-text-opinions--slider {
+      display: flex;
+      transition: transform 0.5s ease-in;
+      margin: 9rem 9rem 9rem 0; }
+      .section-text-opinions--slider .opinions {
+        min-width: 35%;
+        margin-right: 15px;
+        font-size: 1.85rem;
+        padding: 4rem;
+        font-weight: 400;
+        position: relative; }
+        .section-text-opinions--slider .opinions::before {
+          content: '\201C ';
+          font-size: 25rem;
+          position: absolute;
+          top: -8rem;
+          left: 20rem;
+          color: #e6e6e6;
+          z-index: -1; }
+        .section-text-opinions--slider .opinions q {
+          color: #6c757d; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Catamaran", sans-serif;
@@ -89,6 +118,32 @@ body {
 .svg-wave {
   position: absolute;
   bottom: -20rem; }
+
+.background-image {
+  grid-column: full-start / full-end;
+  position: relative; }
+  .background-image img {
+    object-fit: cover;
+    height: 500px;
+    width: 100%; }
+  .background-image--text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f9f7f6;
+    backdrop-filter: blur(3px);
+    padding: 4rem;
+    border-radius: 7px;
+    text-align: center; }
+    .background-image--text h3 {
+      font-size: 3.5rem; }
+    .background-image--text p {
+      font-size: 4rem; }
+
+.reservation {
+  grid-column: center-start / center-end;
+  margin-bottom: 12rem; }
 
 .navigation {
   background-color: #eeb4c7;
@@ -188,45 +243,23 @@ body {
     grid-row: 3 / 4; }
   .header__image {
     max-width: 100%;
-    grid-column: 3 / span 4;
+    grid-column: 4 / span 5;
     grid-row: 1 / -1;
     z-index: 2; }
     .header__image img {
-      width: 65rem; }
-
-.features {
-  grid-column: center-start / center-end;
-  margin: 15rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 6rem;
-  align-items: start; }
-
-.feature {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-row-gap: 1.5rem;
-  grid-column-gap: 2.5rem; }
-  .feature__icon {
-    fill: #eeb4c7;
-    width: 4.5rem;
-    height: 4.5rem;
-    transform: translateY(-1rem);
-    grid-row: 1 / span 2; }
-  .feature__text {
-    font-size: 1.7rem; }
+      width: 100%; }
 
 .about--photo,
 .about--text {
-  margin-top: 12rem; }
+  margin-top: 8rem; }
 
 .about--photo {
-  grid-column: full-start / col-start 4;
+  grid-column: center-start / col-start 4;
   background-color: #fff;
   align-self: center; }
   .about--photo--img {
     max-width: 100%;
-    padding: 5rem; }
+    width: 90%; }
 
 .about--text {
   grid-column: col-end 3 / -1;
@@ -251,107 +284,130 @@ body {
       color: #6c757d;
       font-weight: 400; }
 
-.homes {
+.discounts {
   grid-column: center-start / center-end;
-  margin: 15rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 7rem; }
-
-.home {
-  background-color: #f9f7f6;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 3.5rem; }
-  .home__img {
-    width: 100%;
-    grid-row: 1 / 2;
-    grid-column: 1 / -1;
-    z-index: 1; }
-  .home__like {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    fill: #eeb4c7;
-    height: 2.5rem;
-    width: 2.5rem;
-    z-index: 2;
-    margin: 1rem;
-    justify-self: right; }
-  .home__name {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    width: 80%;
-    justify-self: center;
-    align-self: end;
-    font-family: "Catamaran", sans-serif;
-    font-size: 1.6rem;
-    text-align: center;
-    padding: 1.25rem;
-    background-color: #101d2c;
-    color: #fff;
-    font-weight: 400;
-    transform: translateY(50%);
-    z-index: 3; }
-  .home__rooms, .home__location {
-    margin-top: 2.5rem; }
-  .home__price, .home__rooms, .home__location, .home__area {
-    font-size: 1.5rem;
-    margin-left: 2rem;
-    display: flex;
-    align-items: center; }
-    .home__price svg, .home__rooms svg, .home__location svg, .home__area svg {
-      fill: #eeb4c7;
-      height: 2rem;
-      width: 2rem;
-      margin-right: 1rem; }
-  .home__btn {
-    grid-column: 1 / -1; }
+  grid-gap: 3rem;
+  grid-template-columns: repeat(4, minmax(5rem, 1fr));
+  grid-template-rows: repeat(2, min-content);
+  margin-bottom: 12rem; }
+  .discounts--img-1, .discounts--img-2, .discounts--img-3 {
+    max-width: 100%;
+    height: 100%; }
+  .discounts__text h2, .discounts__text-1 h2 {
+    font-size: 3.5rem; }
+  .discounts__text h3, .discounts__text-1 h3 {
+    font-size: initial; }
+  .discounts__image-container-1, .discounts__image-container-2, .discounts__image-container-3 {
+    overflow: hidden; }
+    .discounts__image-container-1 img, .discounts__image-container-2 img, .discounts__image-container-3 img {
+      transition: transform 0.3s ease-in-out;
+      transform: scale(1); }
+      .discounts__image-container-1 img:hover, .discounts__image-container-2 img:hover, .discounts__image-container-3 img:hover {
+        transform: scale(1.1); }
+  .discounts__text {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; }
+  .discounts__image-container-1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / -1; }
+  .discounts__image-container-2 {
+    grid-column: 2 / 4;
+    grid-row: 1 / -1; }
+    .discounts__image-container-2 img {
+      width: 100%;
+      height: 55rem; }
+  .discounts__image-container-3 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2; }
+    .discounts__image-container-3 img {
+      object-fit: cover; }
+  .discounts__text-1 {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3; }
 
 .gallery {
-  background-color: #d0879f;
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
   padding: 3rem;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 3.5rem; }
   .gallery__image {
-    width: 25rem;
-    max-width: 100%; }
+    width: 35rem;
+    max-width: 100%;
+    position: relative; }
     .gallery__image img {
       width: 100%;
-      height: 200px; }
+      height: 250px;
+      transition: all 400ms ease-in-out; }
+    .gallery__image--description {
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 20;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 400ms ease-in-out; }
+    .gallery__image--caption {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #f9f7f6;
+      font-size: 2rem; }
+
+.gallery__image:hover .gallery__image--description {
+  opacity: 1;
+  bottom: 0; }
+
+.gallery__image:hover img {
+  filter: blur(2px); }
 
 .footer {
-  background-color: #101d2c;
   grid-column: full-start / full-end;
-  padding: 8rem 8rem 0 8rem; }
-
-.nav {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 2rem;
-  align-items: center; }
-  .nav__link:link, .nav__link:visited {
-    font-size: 1.4rem;
-    color: #fff;
-    text-decoration: none;
-    font-family: "Catamaran", sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 1.5rem;
-    display: block;
-    transition: all .2s; }
-  .nav__link:hover, .nav__link:active {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-3px); }
-
-.copyright {
-  font-size: 1.4rem;
+  padding: 0 8rem;
+  display: flex;
+  justify-content: space-between;
   color: #8e8987;
-  margin: 6rem 0;
-  text-align: center;
-  width: 70%;
-  margin-right: auto;
-  margin-left: auto; }
+  font-family: "Catamaran", sans-serif; }
+  .footer h5 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #000; }
+  .footer__form {
+    width: 100%; }
+    .footer__form--text {
+      padding: 2rem 0;
+      font-size: 1.3rem; }
+    .footer__form input, .footer__form button {
+      vertical-align: middle; }
+    .footer__form input[type="email"] {
+      height: 54px;
+      color: #6c757d;
+      font-size: 1.1rem;
+      padding: 0 2rem;
+      position: relative; }
+      .footer__form input[type="email"]:focus, .footer__form input[type="email"]:active {
+        outline: none; }
+    .footer__form button[type="submit"] {
+      height: 54px;
+      color: #f9f7f6;
+      background-color: #da3b85;
+      border-color: #da3b85;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 13px 34px 10px;
+      border: 1px solid transparent; }
+  .footer__contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; }
+    .footer__contact--address {
+      font-size: 2rem;
+      margin: 1rem 0; }

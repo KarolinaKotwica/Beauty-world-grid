@@ -1,43 +1,65 @@
 .footer {
-    background-color: $color-secondary;
     grid-column: full-start / full-end;
-    padding: 8rem 8rem 0 8rem;
-}
-
-.nav {
-    list-style: none;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    grid-gap: 2rem;
-    align-items: center;
-
-    &__link:link,
-    &__link:visited {
-        font-size: 1.4rem;
-        color: #fff;
-        text-decoration: none;
-        font-family: $font-display;
-        text-transform: uppercase;
-        text-align: center;
-        padding: 1.5rem;
-        display: block;
-        transition: all .2s;
-    }
-
-    &__link:hover,
-    &__link:active {
-        background-color: rgba(#fff, .1);
-        transform: translateY(-3px);
-    }
-}
-
-.copyright {
-    font-size: 1.4rem;
+    padding: 0 8rem;
+    display: flex;
+    justify-content: space-between;
     color: $color-grey-light-2;
-    margin: 6rem 0;
-    text-align: center;
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
+    font-family: $font-display;
+
+    h5 {
+        font-size: 4rem;
+        font-weight: 300;
+        color: $color-black;
+    }
+
+    &__form {
+        width: 100%;
+        
+        &--text {
+            padding: 2rem 0;
+            font-size: 1.3rem;
+        }
+
+        input, button {
+            vertical-align: middle;
+        }
+
+        input[type="email"] {
+            height: 54px;
+            color: $color-grey-light-3;
+            font-size: 1.1rem;
+            padding: 0 2rem;
+            position: relative;
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+
+        button[type="submit"] {
+            height: 54px;
+            color: $color-grey-light-1;
+            background-color: $color-primary-pink-dark;
+            border-color: $color-primary-pink-dark;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 13px 34px 10px;
+            border: 1px solid transparent;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+        &--address {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+    }
 }

@@ -11,6 +11,7 @@ $color-secondary: #101d2c;
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #8e8987;
 $color-grey-light-3: #6c757d;
+$color-grey-light-4: #e6e6e6;
 
 $color-grey-dark-1: #373b4d;
 $color-grey-dark-2: #6D5D4B;
@@ -54,7 +55,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: min-content 90vh min-content 40vw min-content;
+    grid-template-rows: min-content 90vh repeat(3, min-content) minmax(250px, 1fr);
     grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] 1fr [full-end];
 
         // @media only screen and (max-width: $bp-large) {
@@ -65,4 +66,44 @@ body {
         // @media only screen and (max-width: $bp-medium) {
         //     grid-template-rows: 6rem calc(100vh - 6rem);
         // }
+}
+
+.section-text {
+    margin-top: 3rem;
+    grid-column: full-start / full-end;
+    text-align: center;
+
+    &-opinions {
+        overflow: hidden;
+        font-family: $font-display;
+
+        &--slider {
+            display: flex;
+            transition: transform 0.5s ease-in;
+            margin: 9rem 9rem 9rem 0;
+
+            .opinions {
+                min-width: 35%;
+                margin-right: 15px;
+                font-size: 1.85rem;
+                padding: 4rem;
+                font-weight: 400;
+                position: relative;
+
+                &::before {
+                    content: '\201C ';
+                    font-size: 25rem;
+                    position: absolute;
+                    top: -8rem;
+                    left: 20rem;
+                    color: $color-grey-light-4;
+                    z-index: -1;
+                }
+
+                q {
+                    color: $color-grey-light-3;
+                }
+            }
+        }
+    }
 }

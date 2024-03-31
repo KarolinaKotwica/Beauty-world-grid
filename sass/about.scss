@@ -1,16 +1,16 @@
 .about--photo,
 .about--text {
-    margin-top: 12rem;
+    margin-top: 8rem;
 }
 
 .about--photo {
-    grid-column: full-start / col-start 4;
+    grid-column: center-start / col-start 4;
     background-color: $color-white;
     align-self: center;
 
     &--img {
         max-width: 100%;
-        padding: 5rem;
+        width: 90%;
     }
 }
 
