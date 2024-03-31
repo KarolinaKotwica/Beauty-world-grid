@@ -1,23 +1,30 @@
 .footer {
     grid-column: full-start / full-end;
-    padding: 0 8rem;
+    padding: 5rem 8rem;
     display: flex;
     justify-content: space-between;
     color: $color-grey-light-2;
     font-family: $font-display;
+    background-color: $color-primary;
+    align-items: center;
+    color: $color-white;
 
     h5 {
         font-size: 4rem;
         font-weight: 300;
-        color: $color-black;
+        color: $color-grey-light-3;
     }
 
     &__form {
         width: 100%;
-        
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
         &--text {
             padding: 2rem 0;
             font-size: 1.3rem;
+            width: 50%;
         }
 
         input, button {
@@ -26,10 +33,14 @@
 
         input[type="email"] {
             height: 54px;
+            width: 20rem;
             color: $color-grey-light-3;
             font-size: 1.1rem;
             padding: 0 2rem;
             position: relative;
+            outline: none;
+            border: none;
+            color: $color-primary-pink-dark;
 
             &:focus,
             &:active {
@@ -54,7 +65,6 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        justify-content: center;
         width: 100%;
 
         &--address {

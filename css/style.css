@@ -7,6 +7,10 @@
   padding: 0;
   box-sizing: inherit; }
 
+::selection {
+  background-color: transparent;
+  color: #da3b85; }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -141,6 +145,31 @@ body {
     .background-image--text p {
       font-size: 4rem; }
 
+.social-media {
+  grid-column: full-start / full-end;
+  width: 50%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem auto;
+  padding: 2rem; }
+  .social-media div {
+    display: block; }
+  .social-media-img {
+    transition: opacity .2s ease-in; }
+    .social-media-img:hover {
+      opacity: .7; }
+
+.rights {
+  grid-column: full-start / full-end;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+  align-items: center;
+  font-size: 1.5rem; }
+
 .reservation {
   grid-column: center-start / center-end;
   margin-bottom: 12rem; }
@@ -207,7 +236,7 @@ body {
       color: #fff;
       transition-duration: .25s; }
       .navigation__item a:hover {
-        color: #d0879f; }
+        color: #da3b85; }
 
 .header {
   background-color: #eeb4c7;
@@ -368,28 +397,39 @@ body {
 
 .footer {
   grid-column: full-start / full-end;
-  padding: 0 8rem;
+  padding: 5rem 8rem;
   display: flex;
   justify-content: space-between;
   color: #8e8987;
-  font-family: "Catamaran", sans-serif; }
+  font-family: "Catamaran", sans-serif;
+  background-color: #eeb4c7;
+  align-items: center;
+  color: #fff; }
   .footer h5 {
     font-size: 4rem;
     font-weight: 300;
-    color: #000; }
+    color: #6c757d; }
   .footer__form {
-    width: 100%; }
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
     .footer__form--text {
       padding: 2rem 0;
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      width: 50%; }
     .footer__form input, .footer__form button {
       vertical-align: middle; }
     .footer__form input[type="email"] {
       height: 54px;
+      width: 20rem;
       color: #6c757d;
       font-size: 1.1rem;
       padding: 0 2rem;
-      position: relative; }
+      position: relative;
+      outline: none;
+      border: none;
+      color: #da3b85; }
       .footer__form input[type="email"]:focus, .footer__form input[type="email"]:active {
         outline: none; }
     .footer__form button[type="submit"] {
@@ -406,7 +446,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
     width: 100%; }
     .footer__contact--address {
       font-size: 2rem;

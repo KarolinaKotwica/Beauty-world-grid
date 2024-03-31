@@ -18,3 +18,10 @@ let moveOpinion = () => {
 }
 
 setInterval(moveOpinion, 5000);
+
+//date
+let date = new Date();
+year = date.getFullYear();
+
+let changeDate = document.getElementById('date');
+changeDate.innerText = year;

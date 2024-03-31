@@ -1,3 +1,32 @@
 .social-media {
-    
+    grid-column: full-start / full-end;
+    width: 50%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto;
+    padding: 2rem;
+
+    div {
+        display: block;
+    }
+
+    &-img {
+        transition: opacity .2s ease-in;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+.rights {
+    grid-column: full-start / full-end;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
+    align-items: center;
+    font-size: 1.5rem;
 }
