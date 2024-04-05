@@ -3,8 +3,16 @@
     grid-column: full-start / full-end;
     grid-row: 1;
 
+
+    z-index: 50;
     display: flex;
     justify-content: center;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: background-color 0.3s;
+    background-color: transparent;
 
     &__checkbox {
         opacity: 0;
@@ -89,6 +97,11 @@
             }
         }
     }
+}
+
+.navigation.sticky {
+  background-color: #d0879fdb;
+  color: #fff; 
 }
 
 // #menu__toggle {

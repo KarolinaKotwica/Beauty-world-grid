@@ -8,6 +8,21 @@
     background-color: $color-primary;
     align-items: center;
     color: $color-white;
+    position: relative;
+
+    &-svg-1 {
+        position: absolute;
+        bottom: 30rem;
+        left: 0;
+        z-index: -1;
+    }
+
+    &-svg-2 {
+        position: absolute;
+        top: 40rem;
+        right: 0;
+        z-index: -1;
+    }
 
     h5 {
         font-size: 4rem;

@@ -151,7 +151,7 @@ body {
   max-width: 100%;
   display: flex;
   justify-content: space-around;
-  margin: 2rem auto;
+  margin: 10rem auto 0;
   padding: 2rem; }
   .social-media div {
     display: block; }
@@ -178,8 +178,14 @@ body {
   background-color: #eeb4c7;
   grid-column: full-start / full-end;
   grid-row: 1;
+  z-index: 50;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: background-color 0.3s;
+  background-color: transparent; }
   .navigation__checkbox {
     opacity: 0; }
     .navigation__checkbox:checked + .navigation__button > span {
@@ -237,6 +243,10 @@ body {
       transition-duration: .25s; }
       .navigation__item a:hover {
         color: #da3b85; }
+
+.navigation.sticky {
+  background-color: #d0879fdb;
+  color: #fff; }
 
 .header {
   background-color: #eeb4c7;
@@ -404,7 +414,18 @@ body {
   font-family: "Catamaran", sans-serif;
   background-color: #eeb4c7;
   align-items: center;
-  color: #fff; }
+  color: #fff;
+  position: relative; }
+  .footer-svg-1 {
+    position: absolute;
+    bottom: 30rem;
+    left: 0;
+    z-index: -1; }
+  .footer-svg-2 {
+    position: absolute;
+    top: 40rem;
+    right: 0;
+    z-index: -1; }
   .footer h5 {
     font-size: 4rem;
     font-weight: 300;

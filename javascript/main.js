@@ -25,3 +25,17 @@ year = date.getFullYear();
 
 let changeDate = document.getElementById('date');
 changeDate.innerText = year;
+
+//sticky nav
+window.onscroll = function() {myFunction()};
+
+var navbar = document.querySelector('.navigation');
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add('sticky');
+  } else {
+    navbar.classList.remove('sticky');
+  }
+}
