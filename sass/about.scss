@@ -1,6 +1,10 @@
 .about--photo,
 .about--text {
     margin-top: 8rem;
+
+        @media only screen and (max-width: $bp-small) {
+        margin-top: 0;
+    }
 }
 
 .about--photo {
@@ -8,15 +12,40 @@
     background-color: $color-white;
     align-self: center;
 
+    @media only screen and (max-width: $bp-large) {
+        align-self: start;
+        margin-top: 18rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: center-start / center-end;
+        display: flex;
+        justify-content: center;
+    }
+
+    
+
     &--img {
         max-width: 100%;
         width: 90%;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 55%;
+        }
     }
 }
 
 .about--text {
     grid-column: col-end 3 / -1;
     background-color: $color-white;
+
+    @media only screen and (max-width: $bp-large) {
+        max-height: 400px;
+    }
+    
+    @media only screen and (max-width: $bp-small) {
+        grid-column: center-start / center-end;
+    }
 
     &--container {
         padding: 12rem 10rem 10rem 3rem;

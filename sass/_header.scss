@@ -6,7 +6,7 @@
 
     display: grid;
     grid-template-columns: 1fr max-content repeat(6, 1fr);
-    grid-template-rows: 1fr min-content min-content minmax(6rem, min-content) 5rem;
+    grid-template-rows: 10rem min-content min-content minmax(6rem, min-content) 5rem;
     grid-row-gap: 2.5rem;
   
     padding: 4rem;
@@ -17,9 +17,9 @@
     //     grid-column: 1 / -1;
     // }
 
-    // @media only screen and (max-width: $bp-small) {
-    //     padding: 5rem;
-    // }
+    @media only screen and (max-width: $bp-small) {
+        padding: 5rem;
+    }
 
     &__text-box {
         padding: 5rem;
@@ -30,6 +30,10 @@
         color: $color-white;
         grid-column: 2 / 3;
         align-self: center;
+
+        @media only screen and (max-width: $bp-small) {
+            z-index: 2;
+        }
     }
 
     .heading--main {
@@ -55,11 +59,22 @@
     &__image {
         max-width: 100%;
         grid-column: 4 / span 5;
-        grid-row: 1 / -1;
+        grid-row: 0 / -1;
         z-index: 2;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 9 / 10;
+            grid-row: 4 / -1;
+            transform: scale(5);
+            z-index: 1;
+        }
 
         img {
             width: 100%;
+
+            @media only screen and (max-width: $bp-small) {
+                opacity: 0.85;
+            }
         }
     }
 

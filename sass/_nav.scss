@@ -15,7 +15,7 @@
     background-color: transparent;
 
     &__checkbox {
-        opacity: 0;
+        display: none;
 
         &:checked + .navigation__button > span {
             transform: rotate(45deg);
@@ -33,18 +33,40 @@
         &:checked ~ .menu__box {
             left: 0 !important;
         }
+
+        &:checked ~ .navigation__nav .navigation__list {
+            display: flex;
+            min-height: 100vh;
+            background-color: #d0879fc0;
+            padding-top: 10rem;
+            transition: all 1.2s ease;
+        }
+
+        &:checked ~ .navigation__nav {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            transition: all 1.2s ease;
+        }
     }
 
     &__button {
         position: fixed;
-        top: 20px;
+        top: 30px;
         left: 20px;
         width: 26px;
         height: 26px;
         cursor: pointer;
-        z-index: 5;
+        z-index: 100;
         color: $color-white;
         display: none;
+
+        @media only screen and (max-width: $bp-small) {
+            display: block;
+        }
 
             & > span,
             & > span::before,
@@ -73,11 +95,35 @@
         justify-content: end;
         width: 90%;
         padding: 2rem;
+        position: relative;
+        transition: all .8s ease;
+        opacity: 1;
+
+        @media only screen and (max-width: $bp-small) {
+            opacity: 0;
+            right: -20rem;
+            transition: all 1.2s ease;
+        }
     }
 
     &__list {
-        display: flex;
-        flex-direction: row;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 80;
+        transition: all .5s ease-in;
+
+        @media only screen and (min-width: $bp-large) {
+            display: flex;
+            position: static;
+            flex-direction: row;
+            justify-content: end;
+        }
     }
 
     &__item {
@@ -103,88 +149,3 @@
   background-color: #d0879fdb;
   color: #fff; 
 }
-
-// #menu__toggle {
-//     opacity: 0;
-// }
-  
-// #menu__toggle:checked + .menu__btn > span {
-//     transform: rotate(45deg);
-// }
-// #menu__toggle:checked + .menu__btn > span::before {
-//     top: 0;
-//     transform: rotate(0deg);
-// }
-  
-// #menu__toggle:checked + .menu__btn > span::after {
-//     top: 0;
-//     transform: rotate(90deg);
-// }
-  
-// #menu__toggle:checked ~ .menu__box {
-//     left: 0 !important;
-// }
-  
-// .menu__btn {
-//     position: fixed;
-//     top: 20px;
-//     left: 20px;
-//     width: 26px;
-//     height: 26px;
-//     cursor: pointer;
-//     z-index: 3;
-// }
-  
-// .menu__btn > span,
-// .menu__btn > span::before,
-// .menu__btn > span::after {
-//     display: block;
-//     position: absolute;
-//     width: 100%;
-//     height: 2px;
-//     background-color: $color-grey-light-1;
-//     transition-duration: .25s;
-// }
-  
-// .menu__btn > span::before {
-//     content: '';
-//     top: -8px;
-// }
-  
-// .menu__btn > span::after {
-//     content: '';
-//     top: 8px;
-// }
-  
-// .menu__box {
-//     display: grid;
-//     justify-content: center;
-//     align-content: center;
-//     position: fixed;
-//     text-align: center;
-//     top: 0;
-//     left: -100%;
-//     width: 100%;
-//     height: 100%;
-//     margin: 0;
-//     padding: 80px 0;
-//     list-style: none;
-//     background-color: $color-primary;
-//     box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-//     transition-duration: .25s;
-//     z-index: 2;
-// }
-  
-// .menu__item {
-//     display: block;
-//     padding: 12px 24px;
-//     color: $color-grey-light-1;
-//     font-family: 'Roboto', sans-serif;
-//     font-size: 20px;
-//     font-weight: 600;
-//     text-decoration: none;
-//     transition-duration: .25s;
-//   }
-//   .menu__item:hover {
-//     color: $color-grey-dark-1;
-//   }

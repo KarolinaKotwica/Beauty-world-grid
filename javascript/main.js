@@ -33,9 +33,11 @@ var navbar = document.querySelector('.navigation');
 var sticky = navbar.offsetTop;
 
 function myFunction() {
-  if (window.pageYOffset > sticky) {
-    navbar.classList.add('sticky');
-  } else {
-    navbar.classList.remove('sticky');
+  if (window.innerWidth > 600) {
+    if (window.pageYOffset > sticky) {
+      navbar.classList.add('sticky');
+    } else {
+      navbar.classList.remove('sticky');
+    }
   }
 }

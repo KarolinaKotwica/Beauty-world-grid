@@ -40,6 +40,11 @@
             padding: 2rem 0;
             font-size: 1.3rem;
             width: 50%;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 1.8rem;
+                width: 90%;
+            }
         }
 
         input, button {
@@ -56,6 +61,10 @@
             outline: none;
             border: none;
             color: $color-primary-pink-dark;
+
+            @media only screen and (max-width: $bp-large) {
+                width: 30rem;
+            }
 
             &:focus,
             &:active {
@@ -85,6 +94,10 @@
         &--address {
             font-size: 2rem;
             margin: 1rem 0;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 2.3rem;
+            }
         }
     }
 }
