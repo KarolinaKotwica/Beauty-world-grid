@@ -63,10 +63,14 @@
         z-index: 100;
         color: $color-white;
         display: none;
-
-        @media only screen and (max-width: $bp-small) {
+        
+        // @media only screen and (max-width: $bp-small) {
+        //     display: block;
+        // }
+        @media only screen and (max-width: $bp-medium) {
             display: block;
         }
+
 
             & > span,
             & > span::before,
@@ -94,7 +98,7 @@
         display: flex;
         justify-content: end;
         width: 90%;
-        padding: 2rem;
+        padding: .5rem;
         position: relative;
         transition: all .8s ease;
         opacity: 1;
@@ -118,7 +122,7 @@
         z-index: 80;
         transition: all .5s ease-in;
 
-        @media only screen and (min-width: $bp-large) {
+        @media only screen and (min-width: $bp-medium) {
             display: flex;
             position: static;
             flex-direction: row;
@@ -130,8 +134,13 @@
         display: block;
         padding: 12px 24px;
         font-family: 'Roboto', sans-serif;
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 600;
+        
+
+        // @media only screen and (max-width: $bp-medium) {
+        //     font-size: 1.5rem;
+        // }
 
         a {
             text-decoration: none;

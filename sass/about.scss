@@ -11,8 +11,9 @@
     grid-column: center-start / col-start 4;
     background-color: $color-white;
     align-self: center;
+    
 
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-largest) {
         align-self: start;
         margin-top: 18rem;
     }

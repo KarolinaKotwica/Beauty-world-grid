@@ -41,7 +41,7 @@
             font-size: 1.3rem;
             width: 50%;
 
-            @media only screen and (max-width: $bp-large) {
+            @media only screen and (max-width: $bp-largest) {
                 font-size: 1.8rem;
                 width: 90%;
             }
@@ -62,7 +62,7 @@
             border: none;
             color: $color-primary-pink-dark;
 
-            @media only screen and (max-width: $bp-large) {
+            @media only screen and (max-width: $bp-largest) {
                 width: 30rem;
             }
 
@@ -95,7 +95,7 @@
             font-size: 2rem;
             margin: 1rem 0;
 
-            @media only screen and (max-width: $bp-large) {
+            @media only screen and (max-width: $bp-largest) {
                 font-size: 2.3rem;
             }
         }

@@ -7,7 +7,7 @@
     <title>Beauty World</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="container">
+<body class="container" id="home">
 
     <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
@@ -19,12 +19,12 @@
 
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">About me</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Gallery</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Discounts</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Book now</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+                <li class="navigation__item"><a href="#home" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="#about" class="navigation__link">About me</a></li>
+                <li class="navigation__item"><a href="#gallery" class="navigation__link">Gallery</a></li>
+                <li class="navigation__item"><a href="#dicounts" class="navigation__link">Discounts</a></li>
+                <li class="navigation__item"><a href="#book-now" class="navigation__link">Book now</a></li>
+                <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -49,7 +49,7 @@
     </header>
 
 
-    <div class="about--photo">
+    <div class="about--photo" id="about">
         <img class="about--photo--img" src="./img/avatar.jpg" alt="It's me, hi!">
     </div>
 
@@ -70,7 +70,7 @@
         <h2 class="about--text--container--h2">Peace, Love & Nails</h2>
     </div>
 
-    <section class="gallery mb-lg">
+    <section class="gallery mb-lg" id="gallery">
         <div class="gallery__image gallery__image1">
             <img src="./img/nail-1.jpg" alt="">
             <div class="gallery__image--description">
@@ -162,7 +162,7 @@
         </div>
     </div>
 
-    <section class="discounts">
+    <section class="discounts" id="dicounts">
         <div class="section-text discounts__text">
             <h3 class="about--text--container--h3">From 05.04.2024 to 05.05.2024</h3>
             <h2 class="about--text--container--h2">30% OFF on Classic Manicure % Pedicure</h2>
@@ -199,7 +199,7 @@
         <h2 class="about--text--container--h2">Find the best time for you</h2>
     </div>
 
-    <section class="reservation">
+    <section class="reservation" id="book-now">
         <!-- Calendly inline widget begin -->
         <div class="calendly-inline-widget" data-url="https://calendly.com/karolinarys93?text_color=000000&primary_color=da3b85" style="min-width:320px;height:700px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -219,7 +219,7 @@
             </p>
         </div>
 
-        <div class="footer__contact">
+        <div class="footer__contact" id="contact">
             <h5 class="mb-sm">Get in touch</h5>
             <p class="footer__contact--address">
                 Meierwiesenstrasse 89<br/>8866 Zurich<br/>testemail@gmail.com<br><b>+41 646 464 646</b>

@@ -44,6 +44,7 @@ $bp-small: 37.5em;    // 600px;
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
 
     @media only screen and (max-width: $bp-largest) {
@@ -64,7 +65,7 @@ body {
     grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] 1fr [full-end];
     overflow-x: hidden;
 
-        @media only screen and (max-width: $bp-large) {
+        @media only screen and (max-width: $bp-largest) {
             grid-template-rows: min-content repeat(3, min-content) minmax(250px, 1fr);
         }
 
