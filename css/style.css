@@ -33,6 +33,9 @@ body {
   @media only screen and (max-width: 75em) {
     .container {
       grid-template-rows: min-content repeat(3, min-content) minmax(250px, 1fr); } }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-rows: min-content repeat(3, min-content) repeat(3, minmax(min-content, 1fr)); } }
 
 .section-text {
   margin-top: 3rem;
@@ -244,6 +247,9 @@ body {
 .reservation {
   grid-column: center-start / center-end;
   margin-bottom: 12rem; }
+  @media only screen and (max-width: 75em) {
+    .reservation {
+      margin-bottom: 0; } }
 
 .navigation {
   background-color: #eeb4c7;
@@ -369,6 +375,9 @@ body {
   grid-row-gap: 2.5rem;
   padding: 4rem;
   justify-content: start; }
+  @media only screen and (max-width: 62.5em) {
+    .header {
+      grid-template-rows: 10rem repeat(5, min-content); } }
   @media only screen and (max-width: 37.5em) {
     .header {
       padding: 5rem; } }
@@ -383,6 +392,10 @@ body {
       .header .heading--main,
       .header .heading--sub {
         z-index: 2; } }
+    @media only screen and (max-width: 62.5em) {
+      .header .heading--main,
+      .header .heading--sub {
+        grid-row: 5 / 6; } }
   .header .heading--main {
     font-size: 6.4rem;
     line-height: 1.5;
@@ -402,13 +415,18 @@ body {
     max-width: 100%;
     grid-column: 4 / span 5;
     grid-row: 1 / -1;
-    z-index: 2; }
+    z-index: 2;
+    position: absolute;
+    bottom: -13rem; }
     @media only screen and (max-width: 37.5em) {
       .header__image {
         grid-column: 9 / 10;
         grid-row: 4 / -1;
         transform: scale(5);
         z-index: 1; } }
+    @media only screen and (max-width: 75em) {
+      .header__image {
+        bottom: -17rem; } }
     .header__image img {
       width: 100%; }
       @media only screen and (max-width: 37.5em) {
@@ -516,11 +534,17 @@ body {
     bottom: 30rem;
     left: 0;
     z-index: -1; }
+    @media only screen and (max-width: 62.5em) {
+      .footer-svg-1 {
+        display: none; } }
   .footer-svg-2 {
     position: absolute;
     top: 40rem;
     right: 0;
     z-index: -1; }
+    @media only screen and (max-width: 62.5em) {
+      .footer-svg-2 {
+        top: 44rem; } }
   .footer h5 {
     font-size: 4rem;
     font-weight: 300;

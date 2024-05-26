@@ -1,4 +1,8 @@
 .reservation {
     grid-column: center-start / center-end;
     margin-bottom: 12rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin-bottom: 0;
+    }
 }
