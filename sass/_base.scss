@@ -68,6 +68,10 @@ body {
         @media only screen and (max-width: $bp-largest) {
             grid-template-rows: min-content repeat(3, min-content) minmax(250px, 1fr);
         }
+
+        @media only screen and (max-width: 650px) {
+            grid-template-rows: min-content repeat(3, min-content) auto;
+        }
 }
 
 .section-text {

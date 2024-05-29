@@ -10,13 +10,17 @@
     color: $color-white;
     position: relative;
 
+        @media only screen and (max-width: 650px) {
+            flex-direction: column-reverse;
+        }
+
     &-svg-1 {
         position: absolute;
         bottom: 30rem;
         left: 0;
         z-index: -1;
 
-        @media only screen and (max-width: $bp-large) {
+        @media only screen and (max-width: $bp-largest) {
             display: none;
         }
     }
@@ -27,8 +31,8 @@
         right: 0;
         z-index: -1;
 
-        @media only screen and (max-width: $bp-large) {
-            top: 44rem;
+        @media only screen and (max-width: $bp-largest) {
+            top: 45rem;
         }
     }
 
@@ -72,6 +76,11 @@
 
             @media only screen and (max-width: $bp-largest) {
                 width: 30rem;
+                font-size: 2rem;
+            }
+
+            @media only screen and (max-width: 950px) {
+                width: 100%
             }
 
             &:focus,
@@ -83,13 +92,23 @@
         button[type="submit"] {
             height: 54px;
             color: $color-grey-light-1;
-            background-color: $color-primary-pink-dark;
-            border-color: $color-primary-pink-dark;
+            background-color: $color-primary-dark;
+            border-color: $color-primary-dark;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
             padding: 13px 34px 10px;
             border: 1px solid transparent;
+            transition: all 1s ease-in;
+
+            &:hover {
+                background-color: $color-primary-pink-dark;
+                cursor: pointer;
+            }
+
+            @media only screen and (max-width: 950px) {
+                width: 100%
+            }
         }
     }
 
@@ -98,6 +117,11 @@
         align-items: center;
         flex-direction: column;
         width: 100%;
+
+        @media only screen and (max-width: 650px) {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
 
         &--address {
             font-size: 2rem;

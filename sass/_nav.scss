@@ -79,7 +79,7 @@
                 position: absolute;
                 width: 100%;
                 height: 2px;
-                background-color: $color-grey-light-1;
+                background-color: $color-primary-pink-dark;
                 transition-duration: .25s;
             }
         
@@ -103,7 +103,7 @@
         transition: all .8s ease;
         opacity: 1;
 
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-medium) {
             opacity: 0;
             right: -20rem;
             transition: all 1.2s ease;
@@ -134,13 +134,13 @@
         display: block;
         padding: 12px 24px;
         font-family: 'Roboto', sans-serif;
-        font-size: 2rem;
+        font-size: 2.8rem;
         font-weight: 600;
         
 
-        // @media only screen and (max-width: $bp-medium) {
-        //     font-size: 1.5rem;
-        // }
+        @media only screen and (min-width: $bp-medium) {
+            font-size: 2.2rem;
+        }
 
         a {
             text-decoration: none;

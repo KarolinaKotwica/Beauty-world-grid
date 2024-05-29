@@ -45,6 +45,7 @@
         line-height: 1.5;
         letter-spacing: 0;
         grid-row: 2 / 3;
+        z-index: 2;
     }
 
     .btn--pink {
@@ -54,11 +55,13 @@
         grid-column: 2 / 3;
         grid-row: 4 / 5;
         max-height: 100%;
+        z-index: 2;
     }
 
     .heading--sub {
         font-size: 2rem;
         grid-row: 3 / 4;
+        z-index: 2;
     }
 
     &__image {
@@ -76,10 +79,16 @@
             transform: scale(1.4);
             bottom: -13rem;
         }
-        // @media only screen and (max-width: $bp-medium) {
-        //     transform: scale(1.5);
-        //     bottom: -15rem;
-        // }
+        @media only screen and (max-width: $bp-medium) {
+            transform: scale(2);
+            bottom: -5rem;
+        }
+        @media only screen and (max-width: 650px) {
+            transform: scale(3);
+            bottom: 4rem;
+            right: -8rem;
+            z-index: 1;
+        }
         @media only screen and (max-width: $bp-small) {
             grid-column: 9 / 10;
             grid-row: 4 / -1;

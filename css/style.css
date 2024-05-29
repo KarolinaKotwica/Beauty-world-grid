@@ -33,6 +33,9 @@ body {
   @media only screen and (max-width: 75em) {
     .container {
       grid-template-rows: min-content repeat(3, min-content) minmax(250px, 1fr); } }
+  @media only screen and (max-width: 650px) {
+    .container {
+      grid-template-rows: min-content repeat(3, min-content) auto; } }
 
 .section-text {
   margin-top: 3rem;
@@ -136,6 +139,9 @@ body {
   @media only screen and (max-width: 75em) {
     .svg-wave {
       bottom: -22rem; } }
+  @media only screen and (max-width: 50em) {
+    .svg-wave {
+      bottom: -16rem; } }
   @media only screen and (max-width: 37.5em) {
     .svg-wave {
       bottom: -8rem; } }
@@ -193,6 +199,10 @@ body {
 .about--photo,
 .about--text {
   margin-top: 8rem; }
+  @media only screen and (max-width: 650px) {
+    .about--photo,
+    .about--text {
+      margin-top: 5rem; } }
   @media only screen and (max-width: 37.5em) {
     .about--photo,
     .about--text {
@@ -210,6 +220,9 @@ body {
     .about--photo {
       margin-left: 3rem;
       margin-top: 20rem; } }
+  @media only screen and (max-width: 650px) {
+    .about--photo {
+      grid-column: col-start 3 / col-end 6; } }
   @media only screen and (max-width: 37.5em) {
     .about--photo {
       grid-column: center-start / center-end;
@@ -228,11 +241,18 @@ body {
   @media only screen and (max-width: 62.5em) {
     .about--text {
       max-height: 400px; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 50em) {
     .about--text {
-      grid-column: center-start / center-end; } }
+      max-height: inherit; } }
+  @media only screen and (max-width: 650px) {
+    .about--text {
+      grid-column: col-start 2 / span col-end 8;
+      text-align: center; } }
   .about--text--container {
     padding: 12rem 10rem 10rem 3rem; }
+    @media only screen and (max-width: 650px) {
+      .about--text--container {
+        padding: 0 10rem 5rem 0; } }
     .about--text--container--h3 {
       color: #8e8987;
       text-transform: uppercase;
@@ -257,6 +277,9 @@ body {
   @media only screen and (max-width: 75em) {
     .reservation {
       margin-bottom: 0; } }
+  @media only screen and (max-width: 650px) {
+    .reservation {
+      margin-top: 6rem; } }
 
 .navigation {
   background-color: #eeb4c7;
@@ -316,7 +339,7 @@ body {
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: #f9f7f6;
+      background-color: #da3b85;
       transition-duration: .25s; }
     .navigation__button > span::before {
       content: '';
@@ -332,7 +355,7 @@ body {
     position: relative;
     transition: all .8s ease;
     opacity: 1; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 50em) {
       .navigation__nav {
         opacity: 0;
         right: -20rem;
@@ -358,8 +381,11 @@ body {
     display: block;
     padding: 12px 24px;
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+    font-size: 2.8rem;
     font-weight: 600; }
+    @media only screen and (min-width: 50em) {
+      .navigation__item {
+        font-size: 2.2rem; } }
     .navigation__item a {
       text-decoration: none;
       color: #fff;
@@ -407,17 +433,20 @@ body {
     font-size: 6.4rem;
     line-height: 1.5;
     letter-spacing: 0;
-    grid-row: 2 / 3; }
+    grid-row: 2 / 3;
+    z-index: 2; }
   .header .btn--pink {
     align-self: center;
     justify-self: start;
     line-height: 1rem;
     grid-column: 2 / 3;
     grid-row: 4 / 5;
-    max-height: 100%; }
+    max-height: 100%;
+    z-index: 2; }
   .header .heading--sub {
     font-size: 2rem;
-    grid-row: 3 / 4; }
+    grid-row: 3 / 4;
+    z-index: 2; }
   .header__image {
     max-width: 100%;
     grid-column: 4 / span 5;
@@ -432,6 +461,16 @@ body {
       .header__image {
         transform: scale(1.4);
         bottom: -13rem; } }
+    @media only screen and (max-width: 50em) {
+      .header__image {
+        transform: scale(2);
+        bottom: -5rem; } }
+    @media only screen and (max-width: 650px) {
+      .header__image {
+        transform: scale(3);
+        bottom: 4rem;
+        right: -8rem;
+        z-index: 1; } }
     @media only screen and (max-width: 37.5em) {
       .header__image {
         grid-column: 9 / 10;
@@ -563,12 +602,15 @@ body {
   align-items: center;
   color: #fff;
   position: relative; }
+  @media only screen and (max-width: 650px) {
+    .footer {
+      flex-direction: column-reverse; } }
   .footer-svg-1 {
     position: absolute;
     bottom: 30rem;
     left: 0;
     z-index: -1; }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 75em) {
       .footer-svg-1 {
         display: none; } }
   .footer-svg-2 {
@@ -576,9 +618,9 @@ body {
     top: 40rem;
     right: 0;
     z-index: -1; }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 75em) {
       .footer-svg-2 {
-        top: 44rem; } }
+        top: 45rem; } }
   .footer h5 {
     font-size: 4rem;
     font-weight: 300;
@@ -610,24 +652,39 @@ body {
       color: #da3b85; }
       @media only screen and (max-width: 75em) {
         .footer__form input[type="email"] {
-          width: 30rem; } }
+          width: 30rem;
+          font-size: 2rem; } }
+      @media only screen and (max-width: 950px) {
+        .footer__form input[type="email"] {
+          width: 100%; } }
       .footer__form input[type="email"]:focus, .footer__form input[type="email"]:active {
         outline: none; }
     .footer__form button[type="submit"] {
       height: 54px;
       color: #f9f7f6;
-      background-color: #da3b85;
-      border-color: #da3b85;
+      background-color: #d0879f;
+      border-color: #d0879f;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
       padding: 13px 34px 10px;
-      border: 1px solid transparent; }
+      border: 1px solid transparent;
+      transition: all 1s ease-in; }
+      .footer__form button[type="submit"]:hover {
+        background-color: #da3b85;
+        cursor: pointer; }
+      @media only screen and (max-width: 950px) {
+        .footer__form button[type="submit"] {
+          width: 100%; } }
   .footer__contact {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%; }
+    @media only screen and (max-width: 650px) {
+      .footer__contact {
+        text-align: center;
+        margin-bottom: 5rem; } }
     .footer__contact--address {
       font-size: 2rem;
       margin: 1rem 0; }

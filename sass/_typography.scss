@@ -69,6 +69,10 @@
         bottom: -22rem;
     }
 
+    @media only screen and (max-width: $bp-medium) {
+        bottom: -16rem;
+    }
+
     @media only screen and (max-width: $bp-small) {
         bottom: -8rem;
     }

@@ -2,9 +2,13 @@
 .about--text {
     margin-top: 8rem;
 
+        @media only screen and (max-width: 650px) {
+            margin-top: 5rem;
+        }
+
         @media only screen and (max-width: $bp-small) {
-        margin-top: 0;
-    }
+            margin-top: 0;
+        }
 }
 
 .about--photo {
@@ -21,6 +25,10 @@
     @media only screen and (max-width: $bp-large) {
         margin-left: 3rem;
         margin-top: 20rem;
+    }
+
+    @media only screen and (max-width: 650px) {
+        grid-column: col-start 3 / col-end 6;
     }
 
     @media only screen and (max-width: $bp-small) {
@@ -48,13 +56,22 @@
     @media only screen and (max-width: $bp-large) {
         max-height: 400px;
     }
+
+    @media only screen and (max-width: $bp-medium) {
+        max-height: inherit;
+    }
     
-    @media only screen and (max-width: $bp-small) {
-        grid-column: center-start / center-end;
+    @media only screen and (max-width: 650px) {
+        grid-column: col-start 2 / span col-end 8;
+        text-align: center;
     }
 
     &--container {
         padding: 12rem 10rem 10rem 3rem;
+
+        @media only screen and (max-width: 650px) {
+            padding: 0 10rem 5rem 0;
+        }
 
         &--h3 {
             color: $color-grey-light-2;

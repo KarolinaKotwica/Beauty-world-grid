@@ -33,7 +33,7 @@ var navbar = document.querySelector('.navigation');
 var sticky = navbar.offsetTop;
 
 function myFunction() {
-  if (window.innerWidth > 600) {
+  if (window.innerWidth > 800) {
     if (window.pageYOffset > sticky) {
       navbar.classList.add('sticky');
     } else {
