@@ -18,6 +18,11 @@
         margin-top: 18rem;
     }
 
+    @media only screen and (max-width: $bp-large) {
+        margin-left: 3rem;
+        margin-top: 20rem;
+    }
+
     @media only screen and (max-width: $bp-small) {
         grid-column: center-start / center-end;
         display: flex;

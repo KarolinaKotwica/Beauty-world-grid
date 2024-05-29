@@ -65,6 +65,10 @@
     position: absolute;
     bottom: -20rem;
 
+    @media only screen and (max-width: $bp-largest) {
+        bottom: -22rem;
+    }
+
     @media only screen and (max-width: $bp-small) {
         bottom: -8rem;
     }
@@ -73,6 +77,10 @@
 .background-image {
     grid-column: full-start / full-end;
     position: relative;
+
+    @media only screen and (max-width: $bp-large) {
+        margin: 0;
+    }
 
     img {
         object-fit: cover;

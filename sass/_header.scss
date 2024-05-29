@@ -68,21 +68,24 @@
         z-index: 2;
         position: absolute;
         bottom: -13rem;
-
+        
+        @media only screen and (max-width: $bp-largest) {
+            bottom: -17rem;
+        }
+        @media only screen and (max-width: $bp-large) {
+            transform: scale(1.4);
+            bottom: -13rem;
+        }
+        // @media only screen and (max-width: $bp-medium) {
+        //     transform: scale(1.5);
+        //     bottom: -15rem;
+        // }
         @media only screen and (max-width: $bp-small) {
             grid-column: 9 / 10;
             grid-row: 4 / -1;
             transform: scale(5);
             z-index: 1;
         }
-
-        @media only screen and (max-width: $bp-largest) {
-            bottom: -17rem;
-        }
-
-        // @media only screen and (max-width: $bp-largest) {
-        //     bottom: -17rem;
-        // }
 
         img {
             width: 100%;
