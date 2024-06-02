@@ -70,7 +70,7 @@ body {
           position: absolute;
           top: -8rem;
           left: 20rem;
-          color: #e6e6e6;
+          color: #F1F1F1;
           z-index: -1; }
           @media only screen and (max-width: 62.5em) {
             .section-text-opinions--slider .opinions::before {
@@ -649,9 +649,8 @@ body {
   padding: 5rem 8rem;
   display: flex;
   justify-content: space-between;
-  color: #8e8987;
   font-family: "Catamaran", sans-serif;
-  background-color: #eeb4c7;
+  background-color: #F1F1F1;
   align-items: center;
   color: #fff;
   position: relative; }
@@ -680,7 +679,7 @@ body {
   .footer h5 {
     font-size: 4rem;
     font-weight: 300;
-    color: #6c757d; }
+    color: #d0879f; }
     @media only screen and (max-width: 37.5em) {
       .footer h5 {
         text-align: left;
@@ -697,7 +696,8 @@ body {
     .footer__form--text {
       padding: 2rem 0;
       font-size: 1.3rem;
-      width: 50%; }
+      width: 50%;
+      color: #000; }
       @media only screen and (max-width: 75em) {
         .footer__form--text {
           font-size: 1.8rem;
@@ -707,13 +707,12 @@ body {
     .footer__form input[type="email"] {
       height: 54px;
       width: 20rem;
-      color: #6c757d;
+      color: #000;
       font-size: 1.1rem;
       padding: 0 2rem;
       position: relative;
       outline: none;
-      border: none;
-      color: #da3b85; }
+      border: none; }
       @media only screen and (max-width: 75em) {
         .footer__form input[type="email"] {
           width: 30rem;
@@ -747,7 +746,8 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%; }
+    width: 100%;
+    color: #000; }
     @media only screen and (max-width: 650px) {
       .footer__contact {
         text-align: center;
@@ -764,3 +764,7 @@ body {
       @media only screen and (max-width: 75em) {
         .footer__contact--address {
           font-size: 2.3rem; } }
+
+footer.footer svg.footer-svg-1 path,
+footer.footer svg.footer-svg-2 path {
+  fill: #F1F1F1; }

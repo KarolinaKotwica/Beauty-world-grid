@@ -3,9 +3,8 @@
     padding: 5rem 8rem;
     display: flex;
     justify-content: space-between;
-    color: $color-grey-light-2;
     font-family: $font-display;
-    background-color: $color-primary;
+    background-color: $color-grey-light-4;
     align-items: center;
     color: $color-white;
     position: relative;
@@ -43,7 +42,7 @@
     h5 {
         font-size: 4rem;
         font-weight: 300;
-        color: $color-grey-light-3;
+        color: $color-primary-dark;
 
         @media only screen and (max-width: $bp-small) {
             text-align: left;
@@ -67,6 +66,7 @@
             padding: 2rem 0;
             font-size: 1.3rem;
             width: 50%;
+            color: $color-black;
 
             @media only screen and (max-width: $bp-largest) {
                 font-size: 1.8rem;
@@ -81,13 +81,12 @@
         input[type="email"] {
             height: 54px;
             width: 20rem;
-            color: $color-grey-light-3;
+            color: $color-black;
             font-size: 1.1rem;
             padding: 0 2rem;
             position: relative;
             outline: none;
             border: none;
-            color: $color-primary-pink-dark;
 
             @media only screen and (max-width: $bp-largest) {
                 width: 30rem;
@@ -136,6 +135,7 @@
         align-items: center;
         flex-direction: column;
         width: 100%;
+        color: $color-black;
 
         @media only screen and (max-width: 650px) {
             text-align: center;
@@ -158,4 +158,9 @@
             }
         }
     }
+}
+
+footer.footer svg.footer-svg-1 path,
+footer.footer svg.footer-svg-2 path {
+    fill: $color-grey-light-4;
 }
