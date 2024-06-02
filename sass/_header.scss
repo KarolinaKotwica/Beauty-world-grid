@@ -18,7 +18,10 @@
     }
 
     @media only screen and (max-width: $bp-small) {
-        padding: 5rem;
+        padding: 12rem 1rem 30rem 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
 
     &__text-box {
@@ -33,6 +36,7 @@
 
         @media only screen and (max-width: $bp-small) {
             z-index: 2;
+            grid-column: center-start / center-end;
         }
 
         @media only screen and (max-width: $bp-large) {
@@ -46,6 +50,11 @@
         letter-spacing: 0;
         grid-row: 2 / 3;
         z-index: 2;
+
+        @media only screen and (max-width: $bp-small) {
+            line-height: 1;
+            font-size: 4.9rem;
+        }
     }
 
     .btn--pink {
@@ -62,6 +71,11 @@
         font-size: 2rem;
         grid-row: 3 / 4;
         z-index: 2;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.9rem;
+            padding: 0 1rem;
+        }
     }
 
     &__image {
@@ -90,10 +104,11 @@
             z-index: 1;
         }
         @media only screen and (max-width: $bp-small) {
-            grid-column: 9 / 10;
-            grid-row: 4 / -1;
-            transform: scale(5);
-            z-index: 1;
+            // grid-column: 9 / 10;
+            // grid-row: 4 / -1;
+            transform: scale(.8);
+            top: 42rem;
+            left: 1rem;
         }
 
         img {

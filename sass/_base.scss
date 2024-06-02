@@ -65,6 +65,7 @@ body {
     grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] 1fr [full-end];
     overflow-x: hidden;
 
+
         @media only screen and (max-width: $bp-largest) {
             grid-template-rows: min-content repeat(3, min-content) minmax(250px, 1fr);
         }
@@ -72,6 +73,12 @@ body {
         @media only screen and (max-width: 650px) {
             grid-template-rows: min-content repeat(3, min-content) auto;
         }
+        // @media only screen and (max-width: $bp-small) {
+        //     grid-template-rows: min-content repeat(3, min-content) auto;
+        //     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        // }
+
+
 }
 
 .section-text {
@@ -88,6 +95,10 @@ body {
             transition: transform 0.5s ease-in;
             margin: 9rem 9rem 9rem 0;
 
+            @media only screen and (max-width: $bp-small) {
+                margin: 9rem 0rem 9rem 0;
+            }
+
             .opinions {
                 min-width: 35%;
                 margin-right: 15px;
@@ -98,6 +109,10 @@ body {
 
                 @media only screen and (max-width: $bp-medium) {
                     min-width: 55%;
+                }
+
+                @media only screen and (max-width: $bp-small) {
+                    min-width: 100%;
                 }
 
                 &::before {
@@ -116,6 +131,10 @@ body {
 
                 q {
                     color: $color-grey-light-3;
+
+                    @media only screen and (max-width: $bp-small) {
+                        font-size: 2rem;
+                    }
                 }
             }
         }
