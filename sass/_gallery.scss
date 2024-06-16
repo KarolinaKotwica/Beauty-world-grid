@@ -13,13 +13,14 @@
     }
 
     &__image {
-        width: 35rem;
+        width: 45rem;
         max-width: 100%;
         position: relative;
+        margin: 0 auto;
 
-        @media only screen and (max-width: $bp-small) {
-            width: 100%;
-        }
+        // @media only screen and (max-width: $bp-medium) {
+        //     width: 100%;
+        // }
 
         img {
             width: 100%;

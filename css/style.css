@@ -41,6 +41,9 @@ body {
   margin-top: 3rem;
   grid-column: full-start / full-end;
   text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .section-text {
+      margin: 3rem 2.5rem 0 2.5rem; } }
   .section-text-opinions {
     overflow: hidden;
     font-family: "Catamaran", sans-serif; }
@@ -153,8 +156,11 @@ body {
       bottom: -16rem; } }
   @media only screen and (max-width: 37.5em) {
     .svg-wave {
-      bottom: -9rem;
+      bottom: -12rem;
       left: 0; } }
+  @media only screen and (max-width: 435px) {
+    .svg-wave {
+      bottom: -8rem; } }
 
 .background-image {
   grid-column: full-start / full-end;
@@ -186,6 +192,87 @@ body {
       font-size: 3.5rem; }
     .background-image--text p {
       font-size: 4rem; }
+
+.prices {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, min-content); }
+  .prices--img {
+    grid-column: 1 / 3;
+    transform: scale(0.5); }
+    @media only screen and (max-width: 37.5em) {
+      .prices--img {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        width: 100%; } }
+    @media only screen and (max-width: 900px) {
+      .prices--img {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        margin: 0 auto;
+        width: 100%; } }
+  .prices--container {
+    grid-column: 2 / 6;
+    grid-row: 2 / 3;
+    margin-bottom: 5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .prices--container {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        padding: 3.5rem; } }
+    @media only screen and (max-width: 900px) {
+      .prices--container {
+        grid-row: 3 / 4; } }
+    .prices--container--position {
+      font-size: 2.5rem;
+      display: flex;
+      margin-top: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .prices--container--position {
+          font-size: 2rem; } }
+      .prices--container--position--name {
+        white-space: nowrap; }
+      .prices--container--position--dots {
+        flex: 1;
+        border-bottom: 2px dotted #999;
+        margin: 0.6em 5px 1rem; }
+        @media only screen and (max-width: 37.5em) {
+          .prices--container--position--dots {
+            margin: 0.6em 5px .6rem; } }
+      .prices--container--position--price {
+        white-space: nowrap; }
+
+div.section-text:nth-child(2) {
+  grid-column: 4 / -1; }
+  div.section-text:nth-child(2) h2 {
+    padding: 0 5rem; }
+    @media only screen and (max-width: 75em) {
+      div.section-text:nth-child(2) h2 {
+        padding: 0 8rem; } }
+    @media only screen and (max-width: 62.5em) {
+      div.section-text:nth-child(2) h2 {
+        padding: 0 10rem;
+        font-size: 3.5rem; } }
+    @media only screen and (max-width: 900px) {
+      div.section-text:nth-child(2) h2 {
+        padding: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    div.section-text:nth-child(2) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2; } }
+  @media only screen and (max-width: 75em) {
+    div.section-text:nth-child(2) {
+      padding: 0 4rem; } }
+  @media only screen and (max-width: 62.5em) {
+    div.section-text:nth-child(2) {
+      padding: 0 10rem;
+      margin-top: 10rem; } }
+  @media only screen and (max-width: 900px) {
+    div.section-text:nth-child(2) {
+      grid-row: 1 / 2;
+      grid-column: 1 / -1;
+      padding: 0 5rem; } }
 
 .social-media {
   grid-column: full-start / full-end;
@@ -244,10 +331,16 @@ body {
       grid-column: center-start / center-end;
       display: flex;
       justify-content: center;
-      margin: 13rem 0 6rem 0; } }
+      margin: 22rem 0 6rem 0; } }
+  @media only screen and (max-width: 435px) {
+    .about--photo {
+      margin: 15rem 0 6rem 0; } }
   .about--photo--img {
     max-width: 100%;
     width: 90%; }
+    @media only screen and (max-width: 37.5em) {
+      .about--photo--img {
+        width: 70%; } }
 
 .about--text {
   grid-column: col-end 3 / -1;
@@ -409,7 +502,8 @@ body {
     font-weight: 600; }
     @media only screen and (min-width: 50em) {
       .navigation__item {
-        font-size: 2.2rem; } }
+        font-size: 2.2rem;
+        padding: 12px 18px; } }
     .navigation__item a {
       text-decoration: none;
       color: #fff;
@@ -437,7 +531,7 @@ body {
       grid-template-rows: 10rem repeat(5, min-content); } }
   @media only screen and (max-width: 37.5em) {
     .header {
-      padding: 12rem 1rem 30rem 1rem;
+      padding: 12rem 1rem 16rem 1rem;
       text-align: center;
       display: flex;
       flex-direction: column; } }
@@ -466,7 +560,8 @@ body {
     @media only screen and (max-width: 37.5em) {
       .header .heading--main {
         line-height: 1;
-        font-size: 4.9rem; } }
+        font-size: 5.9rem;
+        line-height: 8rem; } }
   .header .btn--pink {
     align-self: center;
     justify-self: start;
@@ -475,13 +570,17 @@ body {
     grid-row: 4 / 5;
     max-height: 100%;
     z-index: 2; }
+    @media only screen and (max-width: 37.5em) {
+      .header .btn--pink {
+        line-height: inherit;
+        margin-top: 4rem; } }
   .header .heading--sub {
     font-size: 2rem;
     grid-row: 3 / 4;
     z-index: 2; }
     @media only screen and (max-width: 37.5em) {
       .header .heading--sub {
-        font-size: 1.9rem;
+        font-size: 2.25rem;
         padding: 0 1rem; } }
   .header__image {
     max-width: 100%;
@@ -516,7 +615,12 @@ body {
       width: 100%; }
       @media only screen and (max-width: 37.5em) {
         .header__image img {
-          opacity: 0.85; } }
+          opacity: 0.95;
+          transform: scale(0.9) translateX(38rem) translateY(-22rem); } }
+      @media only screen and (max-width: 450px) {
+        .header__image img {
+          opacity: 0.95;
+          transform: scale(1.2) translateX(28rem) translateY(-8rem); } }
 
 .discounts {
   grid-column: center-start / center-end;
@@ -566,7 +670,8 @@ body {
   .discounts__image-container-2 {
     grid-column: 2 / 4;
     grid-row: 1 / -1;
-    height: 655px; }
+    height: 655px;
+    object-fit: cover; }
     @media only screen and (max-width: 940px) {
       .discounts__image-container-2 {
         display: none; } }
@@ -609,12 +714,10 @@ body {
     .gallery {
       grid-gap: 1.5rem; } }
   .gallery__image {
-    width: 35rem;
+    width: 45rem;
     max-width: 100%;
-    position: relative; }
-    @media only screen and (max-width: 37.5em) {
-      .gallery__image {
-        width: 100%; } }
+    position: relative;
+    margin: 0 auto; }
     .gallery__image img {
       width: 100%;
       height: 30rem;

@@ -73,10 +73,6 @@ body {
         @media only screen and (max-width: 650px) {
             grid-template-rows: min-content repeat(3, min-content) auto;
         }
-        // @media only screen and (max-width: $bp-small) {
-        //     grid-template-rows: min-content repeat(3, min-content) auto;
-        //     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        // }
 
 
 }
@@ -85,6 +81,10 @@ body {
     margin-top: 3rem;
     grid-column: full-start / full-end;
     text-align: center;
+
+        @media only screen and (max-width: $bp-small) {
+            margin: 3rem 2.5rem 0 2.5rem;
+        }
 
     &-opinions {
         overflow: hidden;

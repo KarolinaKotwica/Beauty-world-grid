@@ -64,13 +64,9 @@
         color: $color-white;
         display: none;
         
-        // @media only screen and (max-width: $bp-small) {
-        //     display: block;
-        // }
         @media only screen and (max-width: $bp-medium) {
             display: block;
         }
-
 
             & > span,
             & > span::before,
@@ -140,6 +136,7 @@
 
         @media only screen and (min-width: $bp-medium) {
             font-size: 2.2rem;
+            padding: 12px 18px;
         }
 
         a {

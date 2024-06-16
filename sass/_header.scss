@@ -18,7 +18,7 @@
     }
 
     @media only screen and (max-width: $bp-small) {
-        padding: 12rem 1rem 30rem 1rem;
+        padding: 12rem 1rem 16rem 1rem;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -53,7 +53,8 @@
 
         @media only screen and (max-width: $bp-small) {
             line-height: 1;
-            font-size: 4.9rem;
+            font-size: 5.9rem;
+            line-height: 8rem;
         }
     }
 
@@ -65,6 +66,11 @@
         grid-row: 4 / 5;
         max-height: 100%;
         z-index: 2;
+
+        @media only screen and (max-width: $bp-small) {
+            line-height: inherit;
+            margin-top: 4rem;
+        }
     }
 
     .heading--sub {
@@ -73,7 +79,7 @@
         z-index: 2;
 
         @media only screen and (max-width: $bp-small) {
-            font-size: 1.9rem;
+            font-size: 2.25rem;
             padding: 0 1rem;
         }
     }
@@ -115,7 +121,13 @@
             width: 100%;
 
             @media only screen and (max-width: $bp-small) {
-                opacity: 0.85;
+                opacity: 0.95;
+                transform: scale(0.9) translateX(38rem) translateY(-22rem);
+            }
+
+            @media only screen and (max-width: 450px) {
+                opacity: 0.95;
+                transform: scale(1.2) translateX(28rem) translateY(-8rem);
             }
         }
     }

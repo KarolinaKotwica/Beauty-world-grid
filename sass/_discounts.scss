@@ -76,6 +76,7 @@
         grid-column: 2 / 4;
         grid-row: 1 / -1;
         height: 655px;
+        object-fit: cover;
 
         @media only screen and (max-width: 940px) {
             display: none;
